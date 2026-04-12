@@ -1,0 +1,1427 @@
+
+C:\Users\Admin\Downloads\azure-code\packages\core>npx tsc --noEmit false --skipLibCheck true
+src/agents/browser/browserAgentInvocation.ts:422:59 - error TS18046: 'm' is of type 'unknown'.
+
+422           const pageIds = pageMatches.map((m) => parseInt(m[1], 10));
+                                                              ~
+
+src/agents/codebase-investigator.ts:100:9 - error TS2322: Type '{ includeThoughts: true; thinkingLevel: ThinkingLevel.HIGH; } | { includeThoughts: true; thinkingBudget: string | undefined; }' is not assignable to type '{ thinkingBudget?: number | null | undefined; includeThoughts?: boolean | undefined; thinkingLevel?: ThinkingLevel | undefined; } | undefined'.
+  Type '{ includeThoughts: true; thinkingBudget: string | undefined; }' is not assignable to type '{ thinkingBudget?: number | null | undefined; includeThoughts?: boolean | undefined; thinkingLevel?: ThinkingLevel | undefined; }'.
+    Types of property 'thinkingBudget' are incompatible.
+      Type 'string | undefined' is not assignable to type 'number | null | undefined'.
+        Type 'string' is not assignable to type 'number'.
+
+100         thinkingConfig: supportsModernFeatures(model)
+            ~~~~~~~~~~~~~~
+
+src/agents/local-executor.ts:767:45 - error TS2339: Property 'saveSummary' does not exist on type 'ContentGenerator'.
+
+767             chat.getChatRecordingService()?.saveSummary(summary);
+                                                ~~~~~~~~~~~
+
+src/agents/local-executor.ts:812:47 - error TS2339: Property 'saveSummary' does not exist on type 'ContentGenerator'.
+
+812               chat.getChatRecordingService()?.saveSummary(summary);
+                                                  ~~~~~~~~~~~
+
+src/agents/local-executor.ts:966:41 - error TS2551: Property 'CHUNK' does not exist on type 'typeof StreamEventType'. Did you mean 'Chunk'?
+
+966       if (resp.type === StreamEventType.CHUNK) {
+                                            ~~~~~
+
+  src/core/azureChat.ts:24:3
+    24   Chunk = 'chunk',
+         ~~~~~
+    'Chunk' is declared here.
+
+src/agents/local-executor.ts:968:23 - error TS18048: 'chunk' is possibly 'undefined'.
+
+968         const parts = chunk.candidates?.[0]?.content?.parts;
+                          ~~~~~
+
+src/agents/local-executor.ts:979:13 - error TS18048: 'chunk' is possibly 'undefined'.
+
+979         if (chunk.functionCalls) {
+                ~~~~~
+
+src/agents/local-executor.ts:980:33 - error TS18048: 'chunk' is possibly 'undefined'.
+
+980           functionCalls.push(...chunk.functionCalls);
+                                    ~~~~~
+
+src/agents/local-executor.ts:1026:9 - error TS2554: Expected 2 arguments, but got 6.
+
+1026         [{ functionDeclarations: tools }],
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1027         startHistory,
+     ~~~~~~~~~~~~~~~~~~~~~
+1028         undefined,
+     ~~~~~~~~~~~~~~~~~~
+1029         undefined,
+     ~~~~~~~~~~~~~~~~~
+
+src/agents/local-executor.ts:1076:35 - error TS2339: Property 'id' does not exist on type '{ name: string; args: Record<string, unknown>; }'.
+
+1076       const callId = functionCall.id ?? `${promptId}-${index}`;
+                                       ~~
+
+src/agents/local-executor.ts:1177:37 - error TS2345: Argument of type 'string' is not assignable to parameter of type 'CompletedToolCall[]'.
+
+1177       chat.recordCompletedToolCalls(model, completedCalls);
+                                         ~~~~~
+
+src/agents/local-executor.ts:1258:35 - error TS2339: Property 'id' does not exist on type '{ name: string; args: Record<string, unknown>; }'.
+
+1258       const callId = functionCall.id ?? `${promptId}-${index}`;
+                                       ~~
+
+src/config/config.ts:1609:44 - error TS2339: Property 'projectId' does not exist on type 'never'.
+
+1609     const quotaPromise = codeAssistServer?.projectId
+                                                ~~~~~~~~~
+
+src/config/config.ts:2152:30 - error TS2339: Property 'refreshAvailableCredits' does not exist on type 'never'.
+
+2152       await codeAssistServer.refreshAvailableCredits();
+                                  ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/config/config.ts:2161:48 - error TS2339: Property 'projectId' does not exist on type 'never'.
+
+2161     if (!codeAssistServer || !codeAssistServer.projectId) {
+                                                    ~~~~~~~~~
+
+src/config/config.ts:2165:44 - error TS2339: Property 'retrieveUserQuota' does not exist on type 'never'.
+
+2165       const quota = await codeAssistServer.retrieveUserQuota({
+                                                ~~~~~~~~~~~~~~~~~
+
+src/config/config.ts:2166:35 - error TS2339: Property 'projectId' does not exist on type 'never'.
+
+2166         project: codeAssistServer.projectId,
+                                       ~~~~~~~~~
+
+src/config/config.ts:2230:45 - error TS2339: Property 'buckets' does not exist on type '{}'.
+
+2230     const bucket = this.lastRetrievedQuota?.buckets?.find(
+                                                 ~~~~~~~
+
+src/config/config.ts:2526:18 - error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+
+2526       ? parseInt(remoteProtection, 10)
+                      ~~~~~~~~~~~~~~~~
+
+src/config/config.ts:2529:18 - error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+
+2529       ? parseInt(remotePrunable, 10)
+                      ~~~~~~~~~~~~~~
+
+src/config/config.ts:3115:23 - error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+
+3115       return parseInt(flag.intValue, 10);
+                           ~~~~~~~~~~~~~
+
+src/config/config.ts:3231:32 - error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+
+3231       const seconds = parseInt(flag.intValue, 10);
+                                    ~~~~~~~~~~~~~
+
+src/confirmation-bus/types.ts:7:1 - error TS6133: 'FunctionCall' is declared but its value is never read.
+
+7 import { type FunctionCall } from '../core/azureApiClient.js';
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/context/chatCompressionService.ts:200:32 - error TS2345: Argument of type '{ functionResponse: { response: { output: string; }; id?: string; name: string; }; }' is not assignable to parameter of type 'never'.
+
+200               newParts.unshift({
+                                   ~
+201                 functionResponse: {
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+205                 },
+    ~~~~~~~~~~~~~~~~~~
+206               });
+    ~~~~~~~~~~~~~~~
+
+src/context/chatCompressionService.ts:215:32 - error TS2345: Argument of type 'Part' is not assignable to parameter of type 'never'.
+
+215               newParts.unshift(part);
+                                   ~~~~
+
+src/context/chatCompressionService.ts:221:30 - error TS2345: Argument of type 'Part' is not assignable to parameter of type 'never'.
+
+221             newParts.unshift(part);
+                                 ~~~~
+
+src/context/chatCompressionService.ts:225:28 - error TS2345: Argument of type 'Part' is not assignable to parameter of type 'never'.
+
+225           newParts.unshift(part);
+                               ~~~~
+
+src/context/toolDistillationService.ts:65:16 - error TS2322: Type 'string | Part[]' is not assignable to type 'Part[]'.
+  Type 'string' is not assignable to type 'Part[]'.
+
+65       return { truncatedContent: content };
+                  ~~~~~~~~~~~~~~~~
+
+  src/context/toolDistillationService.ts:35:3
+    35   truncatedContent: Part[];
+         ~~~~~~~~~~~~~~~~
+    The expected type comes from property 'truncatedContent' which is declared here on type 'DistilledToolOutput'
+
+src/context/toolDistillationService.ts:80:14 - error TS2322: Type 'string | Part[]' is not assignable to type 'Part[]'.
+  Type 'string' is not assignable to type 'Part[]'.
+
+80     return { truncatedContent: content };
+                ~~~~~~~~~~~~~~~~
+
+  src/context/toolDistillationService.ts:35:3
+    35   truncatedContent: Part[];
+         ~~~~~~~~~~~~~~~~
+    The expected type comes from property 'truncatedContent' which is declared here on type 'DistilledToolOutput'
+
+src/core/azureApiClient.ts:191:13 - error TS2567: Enum declarations can only merge with namespace or other enum declarations.
+
+191 export type FinishReason =
+                ~~~~~~~~~~~~
+
+src/core/azureApiClient.ts:283:20 - error TS2339: Property 'function' does not exist on type 'ChatCompletionMessageToolCall'.
+  Property 'function' does not exist on type 'ChatCompletionMessageCustomToolCall'.
+
+283           name: tc.function.name,
+                       ~~~~~~~~
+
+src/core/azureApiClient.ts:286:36 - error TS2339: Property 'function' does not exist on type 'ChatCompletionMessageToolCall'.
+  Property 'function' does not exist on type 'ChatCompletionMessageCustomToolCall'.
+
+286               return JSON.parse(tc.function.arguments) as Record<
+                                       ~~~~~~~~
+
+src/core/azureApiClient.ts:510:13 - error TS2567: Enum declarations can only merge with namespace or other enum declarations.
+
+510 export enum FinishReason {
+                ~~~~~~~~~~~~
+
+src/core/azureApiClient.ts:537:15 - error TS2352: Conversion of type 'Part[] | Content[]' to type 'string[]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type 'Content[]' is not comparable to type 'string[]'.
+    Type 'Content' is not comparable to type 'string'.
+
+537       return (content as string[]).map((c) => ({
+                  ~~~~~~~~~~~~~~~~~~~
+
+src/core/azureApiClient.ts:551:13 - error TS2322: Type 'Part | Content' is not assignable to type 'Content'.
+  Type 'Part' is missing the following properties from type 'Content': role, parts
+
+551     return [content];
+                ~~~~~~~
+
+src/core/azureChat.ts:19:1 - error TS6133: 'AgentLoopContext' is declared but its value is never read.
+
+19 import type { AgentLoopContext } from '../config/agent-loop-context.js';
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/core/azureChat.ts:133:9 - error TS2345: Argument of type '"model"' is not assignable to parameter of type 'LlmRole'.
+
+133         'model',
+            ~~~~~~~
+
+src/core/baseLlmClient.ts:186:7 - error TS2322: Type 'string[]' is not assignable to type 'string | Content[]'.
+  Type 'string[]' is not assignable to type 'Content[]'.
+    Type 'string' is not assignable to type 'Content'.
+
+186       contents: texts,
+          ~~~~~~~~
+
+  src/core/azureApiClient.ts:172:3
+    172   contents: string | Content[];
+          ~~~~~~~~
+    The expected type comes from property 'contents' which is declared here on type 'EmbedContentParameters'
+
+src/core/baseLlmClient.ts:310:15 - error TS2322: Type '{ abortSignal: AbortSignal; responseJsonSchema?: Record<string, unknown> | undefined; responseMimeType?: string; systemInstruction?: string | Part | Content | Part[] | undefined; ... 15 more ...; httpOptions?: Record<string, unknown>; }' is not assignable to type 'GenerateContentConfig'.
+  Types of property 'systemInstruction' are incompatible.
+    Type 'string | Part | Content | Part[] | undefined' is not assignable to type 'string | Content | undefined'.
+      Type 'Part' is not assignable to type 'string | Content | undefined'.
+        Type 'Part' is missing the following properties from type 'Content': role, parts
+
+310         const finalConfig: GenerateContentConfig = {
+                  ~~~~~~~~~~~
+
+src/core/client.ts:286:31 - error TS2345: Argument of type 'readonly Content[]' is not assignable to parameter of type 'Content[]'.
+  The type 'readonly Content[]' is 'readonly' and cannot be assigned to the mutable type 'Content[]'.
+
+286     this.getChat().setHistory(history);
+                                  ~~~~~~~
+
+src/core/client.ts:331:5 - error TS2322: Type 'ContentGenerator | undefined' is not assignable to type 'ChatRecordingService | undefined'.
+  Type 'ContentGenerator' is missing the following properties from type 'ChatRecordingService': conversationFile, cachedConversation, sessionId, projectHash, and 23 more.
+
+331     return this.chat?.getChatRecordingService();
+        ~~~~~~
+
+src/core/client.ts:383:9 - error TS2554: Expected 2 arguments, but got 6.
+
+383         tools,
+            ~~~~~~
+384         history,
+    ~~~~~~~~~~~~~~~~
+...
+391           return [{ functionDeclarations: toolDeclarations }];
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+392         },
+    ~~~~~~~~~
+
+src/core/client.ts:625:35 - error TS2345: Argument of type 'readonly Content[]' is not assignable to parameter of type 'Content[]'.
+  The type 'readonly Content[]' is 'readonly' and cannot be assigned to the mutable type 'Content[]'.
+
+625         this.getChat().setHistory(newHistory);
+                                      ~~~~~~~~~~
+
+src/core/client.ts:913:37 - error TS2304: Cannot find name 'createUserContent'.
+
+913           this.getChat().addHistory(createUserContent(request));
+                                        ~~~~~~~~~~~~~~~~~
+
+src/core/client.ts:1204:54 - error TS2339: Property 'getConversation' does not exist on type 'ContentGenerator'.
+
+1204         const conversation = currentRecordingService.getConversation();
+                                                          ~~~~~~~~~~~~~~~
+
+src/core/client.ts:1205:50 - error TS2339: Property 'getConversationFilePath' does not exist on type 'ContentGenerator'.
+
+1205         const filePath = currentRecordingService.getConversationFilePath();
+                                                      ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/core/client.ts:1240:33 - error TS2345: Argument of type 'readonly Content[]' is not assignable to parameter of type 'Content[]'.
+  The type 'readonly Content[]' is 'readonly' and cannot be assigned to the mutable type 'Content[]'.
+
+1240       this.getChat().setHistory(result.newHistory);
+                                     ~~~~~~~~~~~~~~~~~
+
+src/core/localLiteRtLmClient.ts:16:20 - error TS6133: 'host' is declared but its value is never read.
+
+16   private readonly host: string;
+                      ~~~~
+
+src/core/loggingContentGenerator.ts:187:9 - error TS2552: Cannot find name 'genConfig'. Did you mean 'Config'?
+
+187     if (genConfig?.vertexai) {
+            ~~~~~~~~~
+
+src/core/loggingContentGenerator.ts:350:37 - error TS2552: Cannot find name 'toContents'. Did you mean 'contents'?
+
+350         const contents: Content[] = toContents(req.contents);
+                                        ~~~~~~~~~~
+
+  src/core/loggingContentGenerator.ts:350:15
+    350         const contents: Content[] = toContents(req.contents);
+                      ~~~~~~~~
+    'contents' is declared here.
+
+src/core/loggingContentGenerator.ts:453:11 - error TS2304: Cannot find name 'toContents'.
+
+453           toContents(req.contents),
+              ~~~~~~~~~~
+
+src/core/loggingContentGenerator.ts:478:13 - error TS2304: Cannot find name 'toContents'.
+
+478             toContents(req.contents),
+                ~~~~~~~~~~
+
+src/core/loggingContentGenerator.ts:510:40 - error TS2304: Cannot find name 'toContents'.
+
+510     const requestContents: Content[] = toContents(req.contents);
+                                           ~~~~~~~~~~
+
+src/core/turn.ts:13:3 - error TS1484: 'FinishReason' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+
+13   FinishReason,
+     ~~~~~~~~~~~~
+
+src/core/turn.ts:27:10 - error TS2305: Module '"./azureChat.js"' has no exported member 'InvalidStreamError'.
+
+27 import { InvalidStreamError, type AzureChat } from './azureChat.js';
+            ~~~~~~~~~~~~~~~~~~
+
+src/core/turn.ts:422:10 - error TS1205: Re-exporting a type when 'verbatimModuleSyntax' is enabled requires using 'export type'.
+
+422 export { FinishReason };
+             ~~~~~~~~~~~~
+
+src/hooks/hookTranslator.ts:181:17 - error TS2367: This comparison appears to be unintentional because the types '"user"' and '"system"' have no overlap.
+
+181               : content.role === 'system'
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/hooks/hookTranslator.ts:252:7 - error TS2322: Type 'Content | Content[] | { role: string; parts: { text: string; }[]; }[]' is not assignable to type 'Content | Content[]'.
+  Type '{ role: string; parts: { text: string; }[]; }[]' is not assignable to type 'Content | Content[]'.
+    Type '{ role: string; parts: { text: string; }[]; }[]' is not assignable to type 'Content[]'.
+      Type '{ role: string; parts: { text: string; }[]; }' is not assignable to type 'Content'.
+        Types of property 'role' are incompatible.
+          Type 'string' is not assignable to type '"user" | "model"'.
+
+252       contents,
+          ~~~~~~~~
+
+  src/core/azureApiClient.ts:156:3
+    156   contents: Content | Content[];
+          ~~~~~~~~
+    The expected type comes from property 'contents' which is declared here on type 'GenerateContentParameters'
+
+src/policy/policy-engine.ts:7:1 - error TS6133: 'FunctionCall' is declared but its value is never read.
+
+7 import { type FunctionCall } from '../core/azureApiClient.js';
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/policy/policy-engine.ts:124:10 - error TS2304: Cannot find name 'toolCall'.
+
+124         !toolCall.name ||
+             ~~~~~~~~
+
+src/policy/policy-engine.ts:125:41 - error TS2304: Cannot find name 'toolCall'.
+
+125         !matchesWildcard(rule.toolName, toolCall.name, serverName)
+                                            ~~~~~~~~
+
+src/policy/policy-engine.ts:129:16 - error TS2304: Cannot find name 'toolCall'.
+
+129     } else if (toolCall.name !== rule.toolName) {
+                   ~~~~~~~~
+
+src/policy/policy-engine.ts:132:25 - error TS2304: Cannot find name 'toolCall'.
+
+132       if (serverName && toolCall.name) {
+                            ~~~~~~~~
+
+src/policy/policy-engine.ts:136:13 - error TS2304: Cannot find name 'toolCall'.
+
+136             toolCall.name === formatMcpToolName(rule.mcpName, rule.toolName)
+                ~~~~~~~~
+
+src/policy/policy-engine.ts:143:63 - error TS2304: Cannot find name 'toolCall'.
+
+143           if (rule.toolName === formatMcpToolName(serverName, toolCall.name)) {
+                                                                  ~~~~~~~~
+
+src/policy/policy-engine.ts:170:10 - error TS2304: Cannot find name 'toolCall'.
+
+170     if (!toolCall.args) {
+             ~~~~~~~~
+
+src/policy/policy-engine.ts:492:15 - error TS2304: Cannot find name 'ToolCall'.
+
+492     toolCall: ToolCall,
+                  ~~~~~~~~
+
+src/policy/policy-engine.ts:578:11 - error TS2554: Expected 5-7 arguments, but got 8.
+
+578           subagent,
+              ~~~~~~~~
+
+src/policy/policy-engine.ts:705:13 - error TS2554: Expected 5-7 arguments, but got 8.
+
+705             subagent,
+                ~~~~~~~~
+
+src/policy/policy-engine.ts:892:11 - error TS2345: Argument of type '{ name: string; args: Record<string, unknown>; }' is not assignable to parameter of type 'string'.
+
+892           toolCall,
+              ~~~~~~~~
+
+src/routing/strategies/approvalModeStrategy.ts:61:9 - error TS2554: Expected 2 arguments, but got 4.
+
+61         useGemini3_1,
+           ~~~~~~~~~~~~~
+62         useCustomToolModel,
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routing/strategies/approvalModeStrategy.ts:77:9 - error TS2554: Expected 2 arguments, but got 4.
+
+77         useGemini3_1,
+           ~~~~~~~~~~~~~
+78         useCustomToolModel,
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routing/strategies/classifierStrategy.ts:16:41 - error TS2307: Cannot find module '../core/azureApiClient.js' or its corresponding type declarations.
+
+16 import { createUserContent, Type } from '../core/azureApiClient.js';
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routing/strategies/classifierStrategy.ts:153:23 - error TS2304: Cannot find name 'isFunctionCall'.
+
+153         (content) => !isFunctionCall(content) && !isFunctionResponse(content),
+                          ~~~~~~~~~~~~~~
+
+src/routing/strategies/classifierStrategy.ts:182:9 - error TS2554: Expected 2 arguments, but got 7.
+
+182         useGemini3_1,
+            ~~~~~~~~~~~~~
+183         useGemini3_1FlashLite,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+185         config.getHasAccessToPreviewModel?.() ?? true,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+186         config,
+    ~~~~~~~~~~~~~~
+
+src/routing/strategies/gemmaClassifierStrategy.ts:16:60 - error TS2307: Cannot find module '../core/azureApiClient.js' or its corresponding type declarations.
+
+16 import { createUserContent, type Content, type Part } from '../core/azureApiClient.js';
+                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routing/strategies/gemmaClassifierStrategy.ts:191:23 - error TS2304: Cannot find name 'isFunctionCall'.
+
+191         (content) => !isFunctionCall(content) && !isFunctionResponse(content),
+                          ~~~~~~~~~~~~~~
+
+src/routing/strategies/numericalClassifierStrategy.ts:16:41 - error TS2307: Cannot find module '../core/azureApiClient.js' or its corresponding type declarations.
+
+16 import { createUserContent, Type } from '../core/azureApiClient.js';
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/routing/strategies/numericalClassifierStrategy.ts:159:9 - error TS2554: Expected 2 arguments, but got 7.
+
+159         useGemini3_1,
+            ~~~~~~~~~~~~~
+160         useGemini3_1FlashLite,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+162         config.getHasAccessToPreviewModel?.() ?? true,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+163         config,
+    ~~~~~~~~~~~~~~
+
+src/safety/checker-runner.ts:8:1 - error TS6133: 'FunctionCall' is declared but its value is never read.
+
+8 import type { FunctionCall } from '../core/azureApiClient.js';
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/safety/checker-runner.ts:79:15 - error TS2304: Cannot find name 'ToolCall'.
+
+79     toolCall: ToolCall,
+                 ~~~~~~~~
+
+src/safety/checker-runner.ts:89:15 - error TS2304: Cannot find name 'ToolCall'.
+
+89     toolCall: ToolCall,
+                 ~~~~~~~~
+
+src/safety/checker-runner.ts:121:15 - error TS2304: Cannot find name 'ToolCall'.
+
+121     toolCall: ToolCall,
+                  ~~~~~~~~
+
+src/safety/conseca/policy-enforcer.ts:8:1 - error TS6133: 'FunctionCall' is declared but its value is never read.
+
+8 import type { FunctionCall } from '../core/azureApiClient.js';
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/safety/conseca/policy-enforcer.ts:8:35 - error TS2307: Cannot find module '../core/azureApiClient.js' or its corresponding type declarations.
+
+8 import type { FunctionCall } from '../core/azureApiClient.js';
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/safety/conseca/policy-enforcer.ts:55:13 - error TS2304: Cannot find name 'ToolCall'.
+
+55   toolCall: ToolCall,
+               ~~~~~~~~
+
+src/safety/context-builder.ts:108:50 - error TS2322: Type '{ text: string; toolCalls: ({ name: string; args: Record<string, unknown>; id?: string; } | undefined)[]; }' is not assignable to type '{ text?: string | undefined; toolCalls?: { name: string; args: Record<string, unknown>; }[] | undefined; }'.
+  Types of property 'toolCalls' are incompatible.
+    Type '({ name: string; args: Record<string, unknown>; id?: string | undefined; } | undefined)[]' is not assignable to type '{ name: string; args: Record<string, unknown>; }[]'.
+      Type '{ name: string; args: Record<string, unknown>; id?: string | undefined; } | undefined' is not assignable to type '{ name: string; args: Record<string, unknown>; }'.
+        Type 'undefined' is not assignable to type '{ name: string; args: Record<string, unknown>; }'.
+
+108           turns.push({ user: currentUserRequest, model: modelResponse });
+                                                     ~~~~~
+
+  src/safety/protocol.ts:17:3
+    17   model: {
+         ~~~~~
+    The expected type comes from property 'model' which is declared here on type 'ConversationTurn'
+
+src/safety/context-builder.ts:113:44 - error TS2322: Type '{ text: string; toolCalls: ({ name: string; args: Record<string, unknown>; id?: string; } | undefined)[]; }' is not assignable to type '{ text?: string | undefined; toolCalls?: { name: string; args: Record<string, unknown>; }[] | undefined; }'.
+  Types of property 'toolCalls' are incompatible.
+    Type '({ name: string; args: Record<string, unknown>; id?: string | undefined; } | undefined)[]' is not assignable to type '{ name: string; args: Record<string, unknown>; }[]'.
+      Type '{ name: string; args: Record<string, unknown>; id?: string | undefined; } | undefined' is not assignable to type '{ name: string; args: Record<string, unknown>; }'.
+        Type 'undefined' is not assignable to type '{ name: string; args: Record<string, unknown>; }'.
+
+113           turns.push({ user: { text: '' }, model: modelResponse });
+                                               ~~~~~
+
+  src/safety/protocol.ts:17:3
+    17   model: {
+         ~~~~~
+    The expected type comes from property 'model' which is declared here on type 'ConversationTurn'
+
+src/safety/protocol.ts:7:1 - error TS6133: 'FunctionCall' is declared but its value is never read.
+
+7 import type { FunctionCall } from '../core/azureApiClient.js';
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/scheduler/tool-executor.ts:294:14 - error TS2322: Type 'string | Part[]' is not assignable to type 'Part[]'.
+  Type 'string' is not assignable to type 'Part[]'.
+
+294     return { truncatedContent: content, outputFile };
+                 ~~~~~~~~~~~~~~~~
+
+  src/scheduler/tool-executor.ts:200:16
+    200   ): Promise<{ truncatedContent: Part[]; outputFile?: string }> {
+                       ~~~~~~~~~~~~~~~~
+    The expected type comes from property 'truncatedContent' which is declared here on type '{ truncatedContent: Part[]; outputFile?: string | undefined; }'
+
+src/scheduler/tool-executor.ts:393:60 - error TS2339: Property 'length' does not exist on type 'never'.
+
+393       contentLength: typeof content === 'string' ? content.length : undefined,
+                                                               ~~~~~~
+
+src/services/loopDetectionService.ts:525:34 - error TS2304: Cannot find name 'isFunctionCall'.
+
+525     while (history.length > 0 && isFunctionCall(history[history.length - 1])) {
+                                     ~~~~~~~~~~~~~~
+
+src/services/loopDetectionService.ts:568:32 - error TS2304: Cannot find name 'isFunctionCall'.
+
+568     if (contents.length > 0 && isFunctionCall(contents[0])) {
+                                   ~~~~~~~~~~~~~~
+
+src/services/loopDetectionService.ts:577:7 - error TS2345: Argument of type '(Content | { role: string; parts: { text: string; }[]; })[]' is not assignable to parameter of type 'Content[]'.
+  Type 'Content | { role: string; parts: { text: string; }[]; }' is not assignable to type 'Content'.
+    Type '{ role: string; parts: { text: string; }[]; }' is not assignable to type 'Content'.
+      Types of property 'role' are incompatible.
+        Type 'string' is not assignable to type '"user" | "model"'.
+
+577       contents,
+          ~~~~~~~~
+
+src/services/loopDetectionService.ts:632:7 - error TS2345: Argument of type '(Content | { role: string; parts: { text: string; }[]; })[]' is not assignable to parameter of type 'Content[]'.
+  Type 'Content | { role: string; parts: { text: string; }[]; }' is not assignable to type 'Content'.
+    Type '{ role: string; parts: { text: string; }[]; }' is not assignable to type 'Content'.
+      Types of property 'role' are incompatible.
+        Type 'string' is not assignable to type '"user" | "model"'.
+
+632       contents,
+          ~~~~~~~~
+
+src/telemetry/conseca-logger.ts:13:3 - error TS2305: Module '"./clearcut-logger/clearcut-logger.js"' has no exported member 'EventNames'.
+
+13   EventNames,
+     ~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:28:41 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+28   const clearcutLogger = ClearcutLogger.getInstance(config);
+                                           ~~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:32:42 - error TS2339: Property 'CONSECA_USER_PROMPT' does not exist on type 'typeof EventMetadataKey'.
+
+32         gemini_cli_key: EventMetadataKey.CONSECA_USER_PROMPT,
+                                            ~~~~~~~~~~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:36:42 - error TS2339: Property 'CONSECA_TRUSTED_CONTENT' does not exist on type 'typeof EventMetadataKey'.
+
+36         gemini_cli_key: EventMetadataKey.CONSECA_TRUSTED_CONTENT,
+                                            ~~~~~~~~~~~~~~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:40:42 - error TS2339: Property 'CONSECA_GENERATED_POLICY' does not exist on type 'typeof EventMetadataKey'.
+
+40         gemini_cli_key: EventMetadataKey.CONSECA_GENERATED_POLICY,
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:47:42 - error TS2339: Property 'CONSECA_ERROR' does not exist on type 'typeof EventMetadataKey'.
+
+47         gemini_cli_key: EventMetadataKey.CONSECA_ERROR,
+                                            ~~~~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:72:41 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+72   const clearcutLogger = ClearcutLogger.getInstance(config);
+                                           ~~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:76:42 - error TS2339: Property 'CONSECA_USER_PROMPT' does not exist on type 'typeof EventMetadataKey'.
+
+76         gemini_cli_key: EventMetadataKey.CONSECA_USER_PROMPT,
+                                            ~~~~~~~~~~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:80:42 - error TS2339: Property 'CONSECA_GENERATED_POLICY' does not exist on type 'typeof EventMetadataKey'.
+
+80         gemini_cli_key: EventMetadataKey.CONSECA_GENERATED_POLICY,
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:84:42 - error TS2339: Property 'GEMINI_CLI_TOOL_CALL_NAME' does not exist on type 'typeof EventMetadataKey'.
+
+84         gemini_cli_key: EventMetadataKey.GEMINI_CLI_TOOL_CALL_NAME,
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:88:42 - error TS2339: Property 'CONSECA_VERDICT_RESULT' does not exist on type 'typeof EventMetadataKey'.
+
+88         gemini_cli_key: EventMetadataKey.CONSECA_VERDICT_RESULT,
+                                            ~~~~~~~~~~~~~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:92:42 - error TS2339: Property 'CONSECA_VERDICT_RATIONALE' does not exist on type 'typeof EventMetadataKey'.
+
+92         gemini_cli_key: EventMetadataKey.CONSECA_VERDICT_RATIONALE,
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/telemetry/conseca-logger.ts:99:42 - error TS2339: Property 'CONSECA_ERROR' does not exist on type 'typeof EventMetadataKey'.
+
+99         gemini_cli_key: EventMetadataKey.CONSECA_ERROR,
+                                            ~~~~~~~~~~~~~
+
+src/telemetry/integration.test.circular.ts:60:35 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+60     const logger = ClearcutLogger.getInstance(mockConfig);
+                                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:107:23 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+107   void ClearcutLogger.getInstance(config)?.logStartSessionEvent(event);
+                          ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:127:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+127   ClearcutLogger.getInstance(config)?.logNewPromptEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:148:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+148   ClearcutLogger.getInstance(config)?.logToolCallEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:186:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+186   ClearcutLogger.getInstance(config)?.logToolOutputTruncatedEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:201:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+201   ClearcutLogger.getInstance(config)?.logToolOutputMaskingEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:216:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+216   ClearcutLogger.getInstance(config)?.logFileOperationEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:236:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+236   ClearcutLogger.getInstance(config)?.logApiRequestEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:248:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+248   ClearcutLogger.getInstance(config)?.logFlashFallbackEvent();
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:263:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+263   ClearcutLogger.getInstance(config)?.logRipgrepFallbackEvent();
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:283:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+283   ClearcutLogger.getInstance(config)?.logApiErrorEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:316:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+316   ClearcutLogger.getInstance(config)?.logApiResponseEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:352:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+352   ClearcutLogger.getInstance(config)?.logLoopDetectedEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:367:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+367   ClearcutLogger.getInstance(config)?.logLoopDetectionDisabledEvent();
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:382:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+382   ClearcutLogger.getInstance(config)?.logNextSpeakerCheck(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:397:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+397   ClearcutLogger.getInstance(config)?.logSlashCommandEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:417:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+417   ClearcutLogger.getInstance(config)?.logRewindEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:432:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+432   ClearcutLogger.getInstance(config)?.logIdeConnectionEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:447:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+447   ClearcutLogger.getInstance(config)?.logConversationFinishedEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:462:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+462   ClearcutLogger.getInstance(config)?.logChatCompressionEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:481:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+481   ClearcutLogger.getInstance(config)?.logMalformedJsonResponseEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:496:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+496   ClearcutLogger.getInstance(config)?.logInvalidChunkEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:512:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+512   ClearcutLogger.getInstance(config)?.logNetworkRetryAttemptEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:531:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+531   ClearcutLogger.getInstance(config)?.logContentRetryEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:547:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+547   ClearcutLogger.getInstance(config)?.logContentRetryFailureEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:563:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+563   ClearcutLogger.getInstance(config)?.logModelRoutingEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:579:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+579   ClearcutLogger.getInstance(config)?.logModelSlashCommandEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:595:24 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+595   await ClearcutLogger.getInstance(config)?.logExtensionInstallEvent(event);
+                           ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:610:24 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+610   await ClearcutLogger.getInstance(config)?.logExtensionUninstallEvent(event);
+                           ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:625:24 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+625   await ClearcutLogger.getInstance(config)?.logExtensionUpdateEvent(event);
+                           ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:640:24 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+640   await ClearcutLogger.getInstance(config)?.logExtensionEnableEvent(event);
+                           ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:655:24 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+655   await ClearcutLogger.getInstance(config)?.logExtensionDisableEvent(event);
+                           ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:670:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+670   ClearcutLogger.getInstance(config)?.logEditStrategyEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:685:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+685   ClearcutLogger.getInstance(config)?.logEditCorrectionEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:697:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+697   ClearcutLogger.getInstance(config)?.logAgentStartEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:709:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+709   ClearcutLogger.getInstance(config)?.logAgentFinishEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:726:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+726   ClearcutLogger.getInstance(config)?.logRecoveryAttemptEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:743:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+743   ClearcutLogger.getInstance(config)?.logWebFetchFallbackAttemptEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:758:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+758   ClearcutLogger.getInstance(config)?.logLlmLoopCheckEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:773:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+773   ClearcutLogger.getInstance(config)?.logApprovalModeSwitchEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:786:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+786   ClearcutLogger.getInstance(config)?.logApprovalModeDurationEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:796:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+796   ClearcutLogger.getInstance(config)?.logPlanExecutionEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:810:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+810   ClearcutLogger.getInstance(config)?.logHookCallEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:833:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+833   ClearcutLogger.getInstance(config)?.logStartupStatsEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:856:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+856   ClearcutLogger.getInstance(config)?.logKeychainAvailabilityEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:873:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+873   ClearcutLogger.getInstance(config)?.logTokenStorageInitializationEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:890:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+890   ClearcutLogger.getInstance(config)?.logOnboardingStartEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:907:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+907   ClearcutLogger.getInstance(config)?.logOnboardingSuccessEvent(event);
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:933:29 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+933   const cc = ClearcutLogger.getInstance(config);
+                                ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:966:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+966   ClearcutLogger.getInstance(config)?.logBrowserAgentConnectionEvent({
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:988:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+988   ClearcutLogger.getInstance(config)?.logBrowserAgentVisionStatusEvent({
+                     ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:1006:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+1006   ClearcutLogger.getInstance(config)?.logBrowserAgentTaskOutcomeEvent({
+                      ~~~~~~~~~~~
+
+src/telemetry/loggers.ts:1025:18 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+1025   ClearcutLogger.getInstance(config)?.logBrowserAgentCleanupEvent({
+                      ~~~~~~~~~~~
+
+src/telemetry/sdk.ts:206:34 - error TS2345: Argument of type '(newCredentials: JWTInput) => Promise<void>' is not assignable to parameter of type '(...args: unknown[]) => void'.
+  Types of parameters 'newCredentials' and 'args' are incompatible.
+    Type 'unknown' is not assignable to type 'JWTInput'.
+
+206       authEvents.on('post_auth', authListener);
+                                     ~~~~~~~~~~~~
+
+src/telemetry/sdk.ts:275:41 - error TS2554: Expected 0 arguments, but got 2.
+
+275     spanExporter = new GcpTraceExporter(gcpProjectId, credentials);
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/telemetry/sdk.ts:276:38 - error TS2554: Expected 0 arguments, but got 2.
+
+276     logExporter = new GcpLogExporter(gcpProjectId, credentials);
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/telemetry/sdk.ts:278:39 - error TS2554: Expected 0 arguments, but got 2.
+
+278       exporter: new GcpMetricExporter(gcpProjectId, credentials),
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/telemetry/sdk.ts:424:20 - error TS2339: Property 'getInstance' does not exist on type 'typeof ClearcutLogger'.
+
+424     ClearcutLogger.getInstance()?.shutdown();
+                       ~~~~~~~~~~~
+
+src/telemetry/sdk.ts:443:18 - error TS2339: Property 'off' does not exist on type '{ on: (_event: string, _handler: (...args: unknown[]) => void) => void; emit: (_event: string, ..._args: unknown[]) => void; }'.
+
+443       authEvents.off('post_auth', authListener);
+                     ~~~
+
+src/telemetry/semantic.ts:15:3 - error TS1484: 'FinishReason' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+
+15   FinishReason,
+     ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:331:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+331     case FinishReason.FINISH_REASON_UNSPECIFIED:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:333:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+333     case FinishReason.STOP:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:335:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+335     case FinishReason.MAX_TOKENS:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:337:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+337     case FinishReason.SAFETY:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:339:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+339     case FinishReason.RECITATION:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:341:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+341     case FinishReason.LANGUAGE:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:343:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+343     case FinishReason.OTHER:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:345:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+345     case FinishReason.BLOCKLIST:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:347:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+347     case FinishReason.PROHIBITED_CONTENT:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:349:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+349     case FinishReason.SPII:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:351:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+351     case FinishReason.MALFORMED_FUNCTION_CALL:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:353:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+353     case FinishReason.IMAGE_SAFETY:
+             ~~~~~~~~~~~~
+
+src/telemetry/semantic.ts:355:10 - error TS2693: 'FinishReason' only refers to a type, but is being used as a value here.
+
+355     case FinishReason.UNEXPECTED_TOOL_CALL:
+             ~~~~~~~~~~~~
+
+src/telemetry/telemetryAttributes.ts:26:7 - error TS18048: 'experiments.experimentIds' is possibly 'undefined'.
+
+26       experiments.experimentIds.length > 0 && {
+         ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/tools/definitions/dynamic-declaration-helpers.ts:12:42 - error TS2307: Cannot find module '../core/azureApiClient.js' or its corresponding type declarations.
+
+12 import { type FunctionDeclaration } from '../core/azureApiClient.js';
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/tools/definitions/resolver.ts:7:42 - error TS2307: Cannot find module '../core/azureApiClient.js' or its corresponding type declarations.
+
+7 import { type FunctionDeclaration } from '../core/azureApiClient.js';
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/tools/definitions/types.ts:7:42 - error TS2307: Cannot find module '../core/azureApiClient.js' or its corresponding type declarations.
+
+7 import { type FunctionDeclaration } from '../core/azureApiClient.js';
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/tools/jit-context.ts:7:15 - error TS2300: Duplicate identifier 'Part'.
+
+7 import type { Part, Part, Part } from '../core/azureApiClient.js';
+                ~~~~
+
+src/tools/jit-context.ts:7:21 - error TS2300: Duplicate identifier 'Part'.
+
+7 import type { Part, Part, Part } from '../core/azureApiClient.js';
+                      ~~~~
+
+src/tools/jit-context.ts:7:27 - error TS2300: Duplicate identifier 'Part'.
+
+7 import type { Part, Part, Part } from '../core/azureApiClient.js';
+                            ~~~~
+
+src/tools/ls.ts:239:24 - error TS2345: Argument of type '{ name: string; path: string; isDirectory: boolean; size: number; modifiedTime: Date; }' is not assignable to parameter of type 'never'.
+
+239           entries.push({
+                           ~
+240             name: path.basename(fullPath),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+...
+244             modifiedTime: stats.mtime,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+245           });
+    ~~~~~~~~~~~
+
+src/tools/ls.ts:254:15 - error TS2339: Property 'isDirectory' does not exist on type 'never'.
+
+254         if (a.isDirectory && !b.isDirectory) return -1;
+                  ~~~~~~~~~~~
+
+src/tools/ls.ts:254:33 - error TS2339: Property 'isDirectory' does not exist on type 'never'.
+
+254         if (a.isDirectory && !b.isDirectory) return -1;
+                                    ~~~~~~~~~~~
+
+src/tools/ls.ts:255:16 - error TS2339: Property 'isDirectory' does not exist on type 'never'.
+
+255         if (!a.isDirectory && b.isDirectory) return 1;
+                   ~~~~~~~~~~~
+
+src/tools/ls.ts:255:33 - error TS2339: Property 'isDirectory' does not exist on type 'never'.
+
+255         if (!a.isDirectory && b.isDirectory) return 1;
+                                    ~~~~~~~~~~~
+
+src/tools/ls.ts:256:18 - error TS2339: Property 'name' does not exist on type 'never'.
+
+256         return a.name.localeCompare(b.name);
+                     ~~~~
+
+src/tools/ls.ts:256:39 - error TS2339: Property 'name' does not exist on type 'never'.
+
+256         return a.name.localeCompare(b.name);
+                                          ~~~~
+
+src/tools/ls.ts:262:21 - error TS2339: Property 'isDirectory' does not exist on type 'never'.
+
+262           if (entry.isDirectory) {
+                        ~~~~~~~~~~~
+
+src/tools/ls.ts:263:35 - error TS2339: Property 'name' does not exist on type 'never'.
+
+263             return `[DIR] ${entry.name}`;
+                                      ~~~~
+
+src/tools/ls.ts:265:27 - error TS2339: Property 'name' does not exist on type 'never'.
+
+265           return `${entry.name} (${entry.size} bytes)`;
+                              ~~~~
+
+src/tools/ls.ts:265:42 - error TS2339: Property 'size' does not exist on type 'never'.
+
+265           return `${entry.name} (${entry.size} bytes)`;
+                                             ~~~~
+
+src/tools/ls.ts:290:33 - error TS2339: Property 'isDirectory' does not exist on type 'never'.
+
+290             (entry) => `${entry.isDirectory ? '[DIR] ' : ''}${entry.name}`,
+                                    ~~~~~~~~~~~
+
+src/tools/ls.ts:290:69 - error TS2339: Property 'name' does not exist on type 'never'.
+
+290             (entry) => `${entry.isDirectory ? '[DIR] ' : ''}${entry.name}`,
+                                                                        ~~~~
+
+src/tools/mcp-client.ts:48:29 - error TS6196: 'FunctionCall' is declared but never used.
+
+48 import type { CallableTool, FunctionCall, Part, Tool } from '../core/azureApiClient.js';
+                               ~~~~~~~~~~~~
+
+src/tools/mcp-client.ts:1015:16 - error TS2304: Cannot find name 'ServiceAccountImpersonationProvider'.
+
+1015     return new ServiceAccountImpersonationProvider(mcpServerConfig);
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/tools/mcp-client.ts:1020:16 - error TS2304: Cannot find name 'GoogleCredentialProvider'.
+
+1020     return new GoogleCredentialProvider(mcpServerConfig);
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/tools/mcp-client.ts:1300:11 - error TS2345: Argument of type 'McpCallableTool' is not assignable to parameter of type 'CallableTool'.
+  Property 'functionDeclarations' is missing in type 'McpCallableTool' but required in type 'CallableTool'.
+
+1300           mcpCallableTool,
+               ~~~~~~~~~~~~~~~
+
+  src/core/azureApiClient.ts:487:3
+    487   functionDeclarations: FunctionDeclaration[];
+          ~~~~~~~~~~~~~~~~~~~~
+    'functionDeclarations' is declared here.
+
+src/tools/mcp-client.ts:1347:7 - error TS2420: Class 'McpCallableTool' incorrectly implements interface 'CallableTool'.
+  Property 'functionDeclarations' is missing in type 'McpCallableTool' but required in type 'CallableTool'.
+
+1347 class McpCallableTool implements CallableTool {
+           ~~~~~~~~~~~~~~~
+
+  src/core/azureApiClient.ts:487:3
+    487   functionDeclarations: FunctionDeclaration[];
+          ~~~~~~~~~~~~~~~~~~~~
+    'functionDeclarations' is declared here.
+
+src/tools/mcp-client.ts:1799:18 - error TS2345: Argument of type '{ uri: string; name: string; }' is not assignable to parameter of type 'never'.
+
+1799       roots.push({
+                      ~
+1800         uri: pathToFileURL(dir).toString(),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1801         name: basename(dir),
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1802       });
+     ~~~~~~~
+
+src/tools/mcp-tool.ts:21:29 - error TS6196: 'FunctionCall' is declared but never used.
+
+21 import type { CallableTool, FunctionCall, Part } from '../core/azureApiClient.js';
+                               ~~~~~~~~~~~~
+
+src/tools/mcp-tool.ts:296:7 - error TS2722: Cannot invoke an object which is possibly 'undefined'.
+
+296       this.mcpTool
+          ~~~~~~~~~~~~
+297         .callTool(functionCalls)
+    ~~~~~~~~~~~~~~~~~
+
+src/tools/mcp-tool.ts:300:19 - error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Part[] | PromiseLike<Part[]>'.
+
+300           resolve(res);
+                      ~~~
+
+src/tools/read-file.ts:134:9 - error TS2322: Type 'string | Part' is not assignable to type 'string | Part[]'.
+  Type 'Part' is not assignable to type 'string | Part[]'.
+    Type 'Part' is missing the following properties from type 'Part[]': length, pop, push, concat, and 35 more.
+
+134         llmContent: result.llmContent,
+            ~~~~~~~~~~
+
+  src/tools/tools.ts:747:3
+    747   llmContent: string | Part[];
+          ~~~~~~~~~~
+    The expected type comes from property 'llmContent' which is declared here on type 'ToolResult'
+
+src/tools/read-file.ts:148:7 - error TS2322: Type 'string' is not assignable to type 'Part[]'.
+
+148       llmContent = `
+          ~~~~~~~~~~
+
+src/tools/read-file.ts:156:7 - error TS2322: Type 'string | Part' is not assignable to type 'Part[]'.
+  Type 'string' is not assignable to type 'Part[]'.
+
+156       llmContent = result.llmContent || '';
+          ~~~~~~~~~~
+
+src/tools/read-file.ts:183:9 - error TS2322: Type 'string' is not assignable to type 'Part[]'.
+
+183         llmContent = appendJitContext(llmContent, jitContext);
+            ~~~~~~~~~~
+
+src/tools/read-many-files.ts:209:36 - error TS2345: Argument of type 'string' is not assignable to parameter of type 'never'.
+
+209             processedPatterns.push(escape(normalizedP));
+                                       ~~~~~~~~~~~~~~~~~~~
+
+src/tools/read-many-files.ts:212:36 - error TS2345: Argument of type 'string' is not assignable to parameter of type 'never'.
+
+212             processedPatterns.push(normalizedP);
+                                       ~~~~~~~~~~~
+
+src/tools/read-many-files.ts:387:31 - error TS2345: Argument of type 'string' is not assignable to parameter of type 'Part'.
+
+387             contentParts.push(`${separator}\n\n${fileContentForLlm}\n\n`);
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/tools/read-many-files.ts:439:9 - error TS2345: Argument of type 'string' is not assignable to parameter of type 'Part'.
+
+439         `${JIT_CONTEXT_PREFIX}${jitParts.join('\n')}${JIT_CONTEXT_SUFFIX}`,
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/tools/read-many-files.ts:485:25 - error TS2345: Argument of type 'string' is not assignable to parameter of type 'Part'.
+
+485       contentParts.push(DEFAULT_OUTPUT_TERMINATOR);
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/tools/read-many-files.ts:488:9 - error TS2345: Argument of type 'string' is not assignable to parameter of type 'Part'.
+
+488         'No files matching the criteria were found or all were skipped.',
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/tools/tools.ts:521:7 - error TS2322: Type 'unknown' is not assignable to type 'Record<string, unknown> | undefined'.
+
+521       parametersJsonSchema: this.addWaitForPreviousParameter(
+          ~~~~~~~~~~~~~~~~~~~~
+
+  src/core/azureApiClient.ts:83:3
+    83   parametersJsonSchema?: Record<string, unknown>;
+         ~~~~~~~~~~~~~~~~~~~~
+    The expected type comes from property 'parametersJsonSchema' which is declared here on type 'FunctionDeclaration'
+
+src/tools/web-fetch.ts:731:13 - error TS2353: Object literal may only specify known properties, and 'inlineData' does not exist in type 'Part[]'.
+
+731             inlineData: {
+                ~~~~~~~~~~
+
+  src/tools/tools.ts:747:3
+    747   llmContent: string | Part[];
+          ~~~~~~~~~~
+    The expected type comes from property 'llmContent' which is declared here on type 'ToolResult'
+
+src/utils/bfsFileSearch.ts:64:27 - error TS2345: Argument of type 'string' is not assignable to parameter of type 'never'.
+
+64         currentBatch.push(currentDir);
+                             ~~~~~~~~~~
+
+src/utils/generateContentResponseUtilities.ts:101:5 - error TS2554: Expected 1 arguments, but got 2.
+
+101     config,
+        ~~~~~~
+
+src/utils/generateContentResponseUtilities.ts:109:7 - error TS2322: Type 'Part[]' is not assignable to type 'Part'.
+  Index signature for type 'string' is missing in type 'Part[]'.
+
+109       (part.functionResponse as unknown as { parts: Part }).parts =
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+src/utils/generateContentResponseUtilities.ts:159:41 - error TS2552: Cannot find name 'FunctionCall'. Did you mean 'Function'?
+
+159     .map((part) => part.functionCall as FunctionCall);
+                                            ~~~~~~~~~~~~
+
+  ../../node_modules/typescript/lib/lib.es5.d.ts:319:13
+    319 declare var Function: FunctionConstructor;
+                    ~~~~~~~~
+    'Function' is declared here.
+
+src/utils/generateContentResponseUtilities.ts:172:41 - error TS2552: Cannot find name 'FunctionCall'. Did you mean 'Function'?
+
+172     .map((part) => part.functionCall as FunctionCall);
+                                            ~~~~~~~~~~~~
+
+  ../../node_modules/typescript/lib/lib.es5.d.ts:319:13
+    319 declare var Function: FunctionConstructor;
+                    ~~~~~~~~
+    'Function' is declared here.
+
+src/utils/llm-edit-fixer.ts:78:14 - error TS2339: Property 'OBJECT' does not exist on type 'typeof Type'.
+
+78   type: Type.OBJECT,
+                ~~~~~~
+
+src/utils/llm-edit-fixer.ts:80:31 - error TS2339: Property 'STRING' does not exist on type 'typeof Type'.
+
+80     explanation: { type: Type.STRING },
+                                 ~~~~~~
+
+src/utils/llm-edit-fixer.ts:81:26 - error TS2339: Property 'STRING' does not exist on type 'typeof Type'.
+
+81     search: { type: Type.STRING },
+                            ~~~~~~
+
+src/utils/llm-edit-fixer.ts:82:27 - error TS2339: Property 'STRING' does not exist on type 'typeof Type'.
+
+82     replace: { type: Type.STRING },
+                             ~~~~~~
+
+src/utils/llm-edit-fixer.ts:83:37 - error TS2339: Property 'BOOLEAN' does not exist on type 'typeof Type'.
+
+83     noChangesRequired: { type: Type.BOOLEAN },
+                                       ~~~~~~~
+
+src/utils/pathReader.ts:91:21 - error TS2345: Argument of type 'string | Part' is not assignable to parameter of type 'Part'.
+  Type 'string' is not assignable to type 'Part'.
+
+91       allParts.push(result.llmContent);
+                       ~~~~~~~~~~~~~~~~~
+
+src/utils/pathReader.ts:116:13 - error TS2322: Type 'string | Part' is not assignable to type 'Part'.
+  Type 'string' is not assignable to type 'Part'.
+
+116     return [result.llmContent];
+                ~~~~~~~~~~~~~~~~~
+
+src/utils/shell-utils.ts:486:7 - error TS2322: Type 'Query' is not assignable to type 'null'.
+
+486       query = new Query(bashLanguage, '(ERROR) @error (MISSING) @missing');
+          ~~~~~
+
+src/utils/shell-utils.ts:487:24 - error TS18047: 'query' is possibly 'null'.
+
+487       const captures = query.captures(tree.rootNode);
+                           ~~~~~
+
+src/utils/shell-utils.ts:503:14 - error TS2339: Property 'delete' does not exist on type 'never'.
+
+503       query?.delete();
+                 ~~~~~~
+
+
+Found 237 errors in 48 files.
+
+Errors  Files
+     1  src/agents/browser/browserAgentInvocation.ts:422
+     1  src/agents/codebase-investigator.ts:100
+    10  src/agents/local-executor.ts:767
+    10  src/config/config.ts:1609
+     1  src/confirmation-bus/types.ts:7
+     4  src/context/chatCompressionService.ts:200
+     2  src/context/toolDistillationService.ts:65
+     6  src/core/azureApiClient.ts:191
+     2  src/core/azureChat.ts:19
+     2  src/core/baseLlmClient.ts:186
+     8  src/core/client.ts:286
+     1  src/core/localLiteRtLmClient.ts:16
+     5  src/core/loggingContentGenerator.ts:187
+     3  src/core/turn.ts:13
+     2  src/hooks/hookTranslator.ts:181
+    12  src/policy/policy-engine.ts:7
+     2  src/routing/strategies/approvalModeStrategy.ts:61
+     3  src/routing/strategies/classifierStrategy.ts:16
+     2  src/routing/strategies/gemmaClassifierStrategy.ts:16
+     2  src/routing/strategies/numericalClassifierStrategy.ts:16
+     4  src/safety/checker-runner.ts:8
+     3  src/safety/conseca/policy-enforcer.ts:8
+     2  src/safety/context-builder.ts:108
+     1  src/safety/protocol.ts:7
+     2  src/scheduler/tool-executor.ts:294
+     4  src/services/loopDetectionService.ts:525
+    13  src/telemetry/conseca-logger.ts:13
+     1  src/telemetry/integration.test.circular.ts:60
+    52  src/telemetry/loggers.ts:107
+     6  src/telemetry/sdk.ts:206
+    14  src/telemetry/semantic.ts:15
+     1  src/telemetry/telemetryAttributes.ts:26
+     1  src/tools/definitions/dynamic-declaration-helpers.ts:12
+     1  src/tools/definitions/resolver.ts:7
+     1  src/tools/definitions/types.ts:7
+     3  src/tools/jit-context.ts:7
+    13  src/tools/ls.ts:239
+     6  src/tools/mcp-client.ts:48
+     3  src/tools/mcp-tool.ts:21
+     4  src/tools/read-file.ts:134
+     6  src/tools/read-many-files.ts:209
+     1  src/tools/tools.ts:521
+     1  src/tools/web-fetch.ts:731
+     1  src/utils/bfsFileSearch.ts:64
+     4  src/utils/generateContentResponseUtilities.ts:101
+     5  src/utils/llm-edit-fixer.ts:78
+     2  src/utils/pathReader.ts:91
+     3  src/utils/shell-utils.ts:486
+
+C:\Users\Admin\Downloads\azure-code\packages\core>
