@@ -1,0 +1,1149 @@
+```
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+build/
+target/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ENV
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+*.env.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+
+# Sandbox
+.sandbox/
+
+# Temporary files
+*.tmp
+*.temp
+
+# MyPy
+.mypy_cache/
+
+# Pytest
+.pytest_cache/
+
+# Git
+.git/
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# Browser extensions
+*.crx
+*.xpi
+
+# Certificates
+*.crt
+*.pem
+*.key
+
+# Snapshots
+**/__snapshots__/
+
+# Sandbox macOS profiles
+**/*.sb
+
+# Windows sandbox
+**/*.exe
+**/*.dll
+**/*.sys
+
+# Go build
+*.exe
+*.dll
+*.so
+*.a
+
+# Java build
+*.class
+*.jar
+*.war
+*.ear
+
+# Rust build
+**/target/
+
+# Zig build
+zig-cache/
+zig-out/
+
+# Julia packages
+julia-*/
+
+# Gradle
+.gradle/
+
+# Maven
+.mvn/
+
+# NuGet
+packages/
+
+# Bazel
+bazel-*/
+
+# Yarn PnP
+.pnp.*
+
+# Vite
+.vite/
+
+# Next.js
+.next/
+out/
+
+# Nuxt.js
+.nuxt/
+.output/
+
+# Gatsby
+.public/
+.cache/
+
+# Remix
+.remix/
+
+# Expo
+.expo/
+
+# Ionic
+ionic_*/
+
+# Capacitor
+capacitor_*/
+
+# Webpack
+webpack-*/.cache/
+
+# Rollup
+.rollup.cache/
+
+# Parcel
+.dist/
+
+# SvelteKit
+.svelte-kit/
+
+# Astro
+.astrowatch
+astro-*/
+
+# Docusaurus
+.docusaurus/
+
+# Hexo
+.public/
+
+# VuePress
+.vuepress/dist
+
+# VitePress
+.vitepress/cache
+.vitepress/dist
+
+# Elm
+elm-stuff/
+
+# Elixir
+.erlang.cookie
+.eunit/
+.cover/
+.plt/
+
+# Haskell
+.cabal-sandbox/
+cabal.project.local
+cabal.project.local~
+dist-newstyle/
+*.o
+*.hi
+
+# Nim
+nimcache/
+
+# OCaml
+*.cmo
+*.cmi
+*.cma
+*.cmxa
+*.cmxs
+*.exe
+*.byte
+_d
+*.cache
+
+# Perl
+*.o
+blib/
+pm_to_blib
+*.bs
+
+# PHP
+vendor/
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+.jruby_cache/
+
+# Scala
+lib_managed/
+src_managed/
+target/
+
+# Tcl/Tk
+helpcontents.cds
+
+# TeX
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+
+# AutoIt
+*.au3.properties
+
+# Autotools
+.libs/
+.deps/
+aclocal.m4
+autom4te.cache/
+configure
+config.h
+config.log
+config.status
+config.guess
+config.sub
+depcomp
+install-sh
+ltmain.sh
+missing
+mkinstalldirs
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.manifest
+CPackConfig.cmake
+CPackSourceConfig.cmake
+*.cmake
+*.cmake.*
+
+# CodeLite
+.codelite/
+.session
+.user
+
+# DevComRonin
+.devcomronin/
+
+# Dreamweaver
+.dwsync/
+
+# ENVI
+.sav
+
+# Esbonio
+.esbonio/
+
+# Firefox
+clone-this/
+firefox-profile/
+
+# Flash Builder
+.settings/
+bin-debug/
+bin-release/
+
+# Flex
+bin/
+bin-debug/
+bin-release/
+libs/
+lib/
+
+# Flex Builder
+.settings/
+.bin
+
+# Force.com
+.metadata/
+*.apex
+*.cls
+*.cmp
+*.component
+*.page
+*.trigger
+*.workflow
+.tmp/
+
+# FreeCAD
+.FCMacro
+
+# GitBook
+_book/
+
+# GoReleaser
+dist/
+
+# Green Hills
+*.lis
+*.pbo
+*.rel
+*.srec
+*.s19
+
+# Home Assistant
+deps/
+
+# JBoss
+*.log
+.jboss/
+.jboss_*/
+
+# Jenkins
+jobs/
+nodes/
+plugins/
+workspace/
+
+# Linux
+*
+!.*
+lost+found/
+
+# Litter
+.litter/
+
+# MATLAB
+*.fig
+*.mat
+*.mex*
+*.mx3
+*.prj
+*.scc
+
+# Mercurial
+.hg/
+
+# MIDL
+*.tlb
+*.tlh
+
+# NativeScript
+platforms/
+hooks/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Nimble
+nimblecache/
+
+# Nokia Qt
+*.prl
+*.qm
+*.moc
+*.ui
+
+# npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Objective-C
+*.dSYM/
+*.la
+*.lo
+
+# OpenAPI tools
+.openapi/
+.openapi-generator/
+
+# Oracle Forms
+*.fmx
+*.ftx
+*.pll
+*.plq
+*.rdf
+*.rep
+*.res
+
+# Phalcon
+.ide/
+
+# Play
+lib_managed/
+project_target/
+target/
+.cache/
+
+# Prettier
+.prettierignore
+
+# Pure Data
+pd-externals/
+
+# Qooxdoo
+source-output/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# RAML
+.raml/
+
+# Red/System
+*.r
+
+# Resilio Sync
+.Rapidleech/
+.SyncID
+.SyncIgnore
+
+# ROS
+devel/
+install/
+build/
+
+# RTags
+/RTAGS
+
+# Sass
+.sass-cache/
+*.css.map
+
+# SBT
+target/
+lib_managed/
+src_managed/
+project/project/
+*.log
+
+# Scratch
+*.sb2
+*.sb3
+
+# SketchUp
+.skp
+
+# Standard ML
+*.cm
+*.cmi
+*.cmo
+*.cmx
+*.cma
+*.cmxa
+*.cmxs
+*.exe
+*.byte
+*.so
+*.o
+*.a
+*.hi
+*.p_o
+*.p_cmo
+*.p_cmx
+*.p_cma
+*.p_cmxa
+*.p_cmxs
+*.p_exe
+*.p_byte
+*.p_so
+*.p_o
+*.p_a
+*.p_hi
+
+# Stata
+*.gph
+*.ster
+*.ster.lock
+*.dta
+
+# SugarCRM
+data/
+cache/
+custom/
+upload/
+*.log
+
+# Swift
+.swift-version
+Packages/
+.build/
+
+# Symfony
+var/cache/
+var/logs/
+var/sessions/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Test complete
+.tc/
+
+# Turbo
+.out/
+
+# TypeScript
+*.tsbuildinfo
+*.tsx
+
+# Unity
+Library/
+Temp/
+Obj/
+Build/
+Logs/
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.meta
+*.prefab
+*.a
+*.so
+*.jar
+*.bin
+*.dll
+*.lib
+*.dylib
+*.manifest
+*.xcsettings
+*.bundle
+*.app
+*.ipa
+*.apk
+*.aab
+*.keystore
+*.jks
+*.cer
+*.crt
+*.p12
+*.pfx
+*.pem
+*.key
+*.csr
+*.crl
+*.sst
+*.p7b
+*.p7c
+*.p7s
+*.spc
+*.pfx
+*.p12
+*.der
+*.pem
+*.key
+*.csr
+*.crl
+*.sst
+*.p7b
+*.p7c
+*.p7s
+*.spc
+*.mobileprovision
+*.xcarchive
+*.app
+*.ipa
+*.apk
+*.aab
+*.keystore
+*.jks
+*.cer
+*.crt
+*.p12
+*.pfx
+*.pem
+*.key
+*.csr
+*.crl
+*.sst
+*.p7b
+*.p7c
+*.p7s
+*.spc
+*.mobileprovision
+*.xcarchive
+
+# Unreal Engine
+Saved/
+Binaries/
+Intermediate/
+*.uproject
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.user
+*.userosscache
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+*.ilk
+*.map
+*.lib
+*.nuget.props
+*.nuget.targets
+*.nupkg
+*.nuspec
+*.snupkg
+*.snuspec
+*.lock.json
+*.lock.xml
+*.lock.yml
+*.lock.yaml
+*.lock.toml
+*.lock.ini
+*.lock.cfg
+*.lock.conf
+*.lock.properties
+*.lock.gradle
+*.lock.cmake
+*.lock.rb
+*.lock.py
+*.lock.js
+*.lock.ts
+*.lock.php
+*.lock.java
+*.lock.cs
+*.lock.cpp
+*.lock.c
+*.lock.go
+*.lock.rs
+*.lock.swift
+*.lock.dart
+*.lock.lua
+*.lock.r
+*.lock.scala
+*.lock.kt
+*.lock.kts
+*.lock.groovy
+*.lock.pl
+*.lock.pm
+*.lock.tcl
+*.lock.sql
+*.lock.html
+*.lock.css
+*.lock.scss
+*.lock.less
+*.lock.styl
+*.lock.json
+*.lock.xml
+*.lock.yml
+*.lock.yaml
+*.lock.toml
+*.lock.ini
+*.lock.cfg
+*.lock.conf
+*.lock.properties
+*.lock.gradle
+*.lock.cmake
+*.lock.rb
+*.lock.py
+*.lock.js
+*.lock.ts
+*.lock.php
+*.lock.java
+*.lock.cs
+*.lock.cpp
+*.lock.c
+*.lock.go
+*.lock.rs
+*.lock.swift
+*.lock.dart
+*.lock.lua
+*.lock.r
+*.lock.scala
+*.lock.kt
+*.lock.kts
+*.lock.groovy
+*.lock.pl
+*.lock.pm
+*.lock.tcl
+*.lock.sql
+*.lock.html
+*.lock.css
+*.lock.scss
+*.lock.less
+*.lock.styl
+*.lock.json
+*.lock.xml
+*.lock.yml
+*.lock.yaml
+*.lock.toml
+*.lock.ini
+*.lock.cfg
+*.lock.conf
+*.lock.properties
+*.lock.gradle
+*.lock.cmake
+*.lock.rb
+*.lock.py
+*.lock.js
+*.lock.ts
+*.lock.php
+*.lock.java
+*.lock.cs
+*.lock.cpp
+*.lock.c
+*.lock.go
+*.lock.rs
+*.lock.swift
+*.lock.dart
+*.lock.lua
+*.lock.r
+*.lock.scala
+*.lock.kt
+*.lock.kts
+*.lock.groovy
+*.lock.pl
+*.lock.pm
+*.lock.tcl
+*.lock.sql
+*.lock.html
+*.lock.css
+*.lock.scss
+*.lock.less
+*.lock.styl
+
+# Unreal Engine 4
+*.uproject
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.user
+*.userosscache
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+*.ilk
+*.map
+*.lib
+*.nuget.props
+*.nuget.targets
+*.nupkg
+*.nuspec
+*.snupkg
+*.snuspec
+
+# V
+*.exe
+*.dll
+*.so
+*.a
+*.o
+*.obj
+*.out
+
+# Vim
+*.swp
+*.swo
+*.swn
+*.swm
+*.un~
+Session.vim
+.netrwhist
+tags
+
+# Visual Studio
+*.VC.VC.opendb
+*.VC.db
+*.obj
+*.ilk
+*.res
+*.pch
+*.pdb
+*.ipch
+*.iobj
+*.ipdb
+*.VC.opendb
+*.VC.db
+*.tlog
+*.metagen
+*.filters
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+*.vcproj.filters
+*.vcxproj.user
+*.vcproj.user
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC......VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC......VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.VC.VC.opendb
+*.VC.db
+*.VC.opendb
+*.VC.db
+*.......
